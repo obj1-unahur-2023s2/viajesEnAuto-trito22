@@ -1,0 +1,44 @@
+import clientas.*
+
+describe "testing ludmila" {
+
+	test "precio 18 de ludmila por km" {
+
+		assert.equals(ludmila.precioPorKm(), 18)
+
+}
+}
+
+describe "testing anaMaria" {
+
+	test "anaMaria esta economicamente estable" {
+
+		assert.that(anaMaria.economicamenteEstable())
+
+}
+
+	test "anaMaria no esta economicamente estable" {
+		anaMaria.cambiarSituacionEconomica()
+		assert.notThat(anaMaria.economicamenteEstable())
+
+}
+
+	test "precio 30 de anaMaria por km si esta economicamente estable" {
+	
+		assert.equals(anaMaria.precioPorKm(), 30)
+
+}
+
+	test "precio 25 de anaMaria por km si no esta economicamente estable" {
+		anaMaria.cambiarSituacionEconomica()
+		assert.equals(anaMaria.precioPorKm(), 25)
+	}
+}
+
+describe "testing teresa"{
+	
+	test "precio 22 por km"{
+		assert.equals(teresa.precioPorKm(), 22)
+	}
+	
+}
